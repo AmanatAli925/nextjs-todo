@@ -1,0 +1,368 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+div.todos-container{
+	margin: auto;
+	width: 50%;
+	min-height: 100vh;
+	position: relative;
+}
+
+div.header {
+    display: flex;
+    
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+div.header img{
+	width: 50px;
+    height: 50px;
+}
+
+div.header h1{
+	font-size: 1.8rem;
+	margin: 0;
+	margin-left: 1rem;
+	flex-grow: 1;
+}
+
+div.todos-container div.head-section{
+	display: flex;
+	align-items: center;
+}
+
+
+div.todos-container div.search-bar{
+	min-width: 70%;
+}
+div.todos-container div.search-bar input {
+    width: 100%;
+    border-radius: 1rem;
+    padding: .3rem;
+	margin: 0;
+}
+
+div.todos-container ul.todos-list div.todo-item{
+	margin-bottom: 1rem;
+}
+
+
+div.todos-container  ul.todos-list li button{
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	margin-bottom: -6px;
+}
+
+
+div.todos-container  ul.todos-list li button.duplicate img:hover{
+	content: url('/dup-selected.svg')
+}
+
+
+div.todos-container  ul.todos-list li button.star img:hover{
+	content: url('/star-selected.svg')
+}
+
+div.todos-container  ul.todos-list li button.delete img:hover{
+	content: url('/del-selected.svg')
+}
+
+div.todos-container  ul.todos-list div.dueDate{
+	display: flex;
+	align-items: center;
+}
+
+div.todos-container  ul.todos-list div.dueDate img{
+	margin: 0 6px;
+}
+
+div.todos-container  ul.todos-list div.dueDate p{
+	margin: 0;
+	color: grey;
+}
+
+div.todos-container form.sort-dropdown {
+	display: flex;
+	align-items: center;
+    margin: 0;
+}
+
+div.todos-container form.sort-dropdown input.reset {
+    border: none;
+    max-height: 20px;
+    max-width: 20px;
+    background: url('/red-cross.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+div.todos-container form.sort-dropdown select{
+	
+	padding: 0 .3rem;
+	padding-bottom: 0;
+	border: none;
+	text-align: center;
+	font-size: 1.2rem;
+	-webkit-appearance: none; 
+	appearance: none !important;
+	width: 7rem;
+}
+
+div.todos-container form.sort-dropdown select::-ms-expand{
+	display: none;
+}
+
+form.sort-dropdown select:focus{
+	outline: none;
+}
+
+form.sort-dropdown optgroup{
+	font-size: 1rem;
+	font-weight: normal;
+	background: rgb(102, 99, 104);
+	color: white;
+	border-radius: 8px;
+}
+
+
+div.todos-container ul.todos-list{
+	padding: 0;
+	list-style: none;
+}
+
+div.todos-container ul.todos-list li{
+	display: flex;
+	width: 100%;
+	padding: .3rem 0;
+	margin: .3rem;
+	border-radius: 8px;
+}
+
+
+
+
+
+
+div.todos-container ul.todos-list li p.todo-title{
+	flex-grow: 1;
+	margin: 0;
+	font-size: 1rem;
+	padding-left: .3rem;
+}
+
+
+
+form.create-todo-form{
+	border: 1px solid black;
+	display: flex;
+	padding: .5rem;
+	border-radius: 8px;;
+	padding-bottom: 2rem;
+}
+
+
+
+
+form.create-todo-form div.main-form{
+	flex-grow: 1;
+}
+
+form.create-todo-form div.input-fields input.title-input{
+	width: 100%;
+	border: none;
+	padding: .3rem;
+	padding-top: 0;
+	font-size: 1rem;
+}
+
+form.create-todo-form div.input-fields input.title-input:focus{
+	outline: none;
+}
+
+form.create-todo-form div.form-btns{
+	display: flex;
+}
+
+
+form.create-todo-form div.form-btns button{
+	border: none;
+	background:transparent;
+}
+
+
+
+form.update-todo-form{
+	display: flex;
+	padding: .5rem;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+
+form.update-todo-form div.main-form{
+	flex-grow: 1;
+}
+
+form.update-todo-form div.input-fields input.title-input{
+	width: 100%;
+	border: none;
+	padding: .3rem;
+	padding-top: 0;
+	font-size: 1rem;
+}
+
+form.update-todo-form div.input-fields input.title-input:focus{
+	outline: none;
+}
+
+form.update-todo-form div.form-btns{
+	display: flex;
+}
+
+
+form.update-todo-form div.form-btns button{
+	border: none;
+	background:transparent;
+}
+
+
+
+
+
+div.create-todo-btn{
+	color: blue;
+	display: flex;
+	cursor: pointer;
+	padding-bottom: 4rem;
+}
+
+
+
+
+div.create-todo-btn img{
+	margin-right: .5rem;
+
+}
+
+
+div.pagination {
+    display: inline-flex;
+    bottom: 0;
+    width: 100%;
+	margin-bottom: -6rem;
+	padding-bottom: 2rem;
+	margin-top: 2rem;
+	position: absolute;
+	bottom: 0;
+}
+div.pagination div.page-numbers{
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+}
+
+div.pagination button{
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+	color: green;
+}
+
+div.pagination button.active-page-btn {
+    background: gray;
+    color: white;
+    border-radius: 50%;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+
+div.activity-logs{
+	width: 50%;
+	margin: auto;
+}
+
+div.activity-logs div.log-item{
+	border: 1px solid black;
+	border-radius: 8px;
+	margin: .5rem;
+	padding: .5rem;
+
+}
+
+
+div.activity-logs div.log-item div.log-item-head{
+	display: flex;
+}
+
+div.activity-logs div.log-item div.log-item-head h3{
+	flex-grow: 1;
+	margin: 0;
+}
+div.activity-logs div.log-item p{
+	color: grey;
+	margin: 0;
+}
+
+div.activity-logs div.log-item div.log-item-head p{
+	color: grey;
+	margin: 0;
+}
+@media screen and (max-width: 700px){
+	div.todos-container{
+		width: 100%;
+		padding: 2rem;
+	}
+	div.activity-logs{
+		width: 100%;
+		padding: 2rem;
+		
+	}
+
+	div.todos-container div.head-section{
+		display: block;
+	}
+	div.todos-container div.head-section a.activity-link{
+		float: right;
+		padding: 1rem;
+		padding-top: 2rem;
+	}
+	div.todos-container div.head-section form.sort-dropdown{
+		margin-top: 1rem;
+		border: 1px solid black;
+		display: inline-block;
+		padding: .5rem;
+		
+		border-radius: 8px;
+	}
+}
